@@ -1024,6 +1024,7 @@ MonoBehaviour:
   - {fileID: 958600851}
   - {fileID: 1862622776}
   - {fileID: 1552778369}
+  levelIdentifier: LevelOne
 --- !u!114 &416214682
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1052,7 +1053,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db8caf5db80058b48a5b138b1153a27c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextLevel: GameScene2
+  nextLevel: LevelTwo
   menu: MenuScene
 --- !u!1 &466101559
 GameObject:

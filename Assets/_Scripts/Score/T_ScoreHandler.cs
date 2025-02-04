@@ -8,6 +8,7 @@ public class T_ScoreHandler : MonoBehaviour
     private int _scoreObjects = 3; // Initialize the number of score objects
     public GameObject endCanvas; // Reference to the victory canvas
     public Image[] starImages; // Add references to the star images
+    public string levelIdentifier; // Add a level identifier
 
     public void IncrementScore()
     {
@@ -59,10 +60,10 @@ public class T_ScoreHandler : MonoBehaviour
                 starImages[i].enabled = false; // Deactivate the star image
             }
         }
-
-        if (_score > PlayerPrefs.GetInt("LevelOneScore"))
+        string scoreKey = levelIdentifier + "Score";
+        if (_score > PlayerPrefs.GetInt(scoreKey))
         {
-            PlayerPrefs.SetInt("LevelOneScore", _score);
+            PlayerPrefs.SetInt(scoreKey, _score);
         }
     }
 }

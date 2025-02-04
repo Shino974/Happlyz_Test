@@ -1,18 +1,15 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class T_MenuHandler : MonoBehaviour
 {
     [Header("UI")]
     [SerializeField] private GameObject creditsPanel;
-    
+
     [Header("Levels")]
     [SerializeField] private string levelOne;
     [SerializeField] private string levelTwo;
     [SerializeField] private string levelThree;
-    
+
     [Header("Audio")]
     private AudioSource _audioSource;
     [SerializeField] private AudioClip buttonSound;
@@ -38,14 +35,14 @@ public class T_MenuHandler : MonoBehaviour
         _audioSource.PlayOneShot(buttonSound);
         UnityEngine.SceneManagement.SceneManager.LoadScene(levelThree);
     }
-    
+
     // Quit the game
     public void QuitGame()
     {
         _audioSource.PlayOneShot(buttonSound);
         Application.Quit();
     }
-    
+
     // Crédits
     public void ShowCredits()
     {
