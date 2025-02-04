@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2704199125752435723}
   - component: {fileID: 4608592014401500827}
   m_Layer: 0
-  m_Name: _BlueBird
+  m_Name: _BlackBird
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: -7068613016846842766, guid: b2aa4dabd5098a44d9db709d0d3c77f6, type: 3}
+  m_Sprite: {fileID: 7270778152439584896, guid: 5e0aa399db300624a81bd41ec10cbd1b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -161,5 +161,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf93a3e10a05854499957acb19d835cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  launchForce: 8
+  launchForce: 3
   rb: {fileID: 2704199125752435723}
