@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 2227103978402788124}
   - component: {fileID: 6386859197327061363}
   - component: {fileID: 807053318979747486}
+  - component: {fileID: 1569786602279459069}
   m_Layer: 0
-  m_Name: _AngryBirds
+  m_Name: _RedBird
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -148,3 +149,17 @@ CircleCollider2D:
   m_Offset: {x: 0.677222, y: -0.73140204}
   serializedVersion: 2
   m_Radius: 4.5240436
+--- !u!114 &1569786602279459069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6674133321050758488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 694574492e3c2fc42ba32a03e8a38652, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  launchForce: 5
+  rb: {fileID: 6386859197327061363}
