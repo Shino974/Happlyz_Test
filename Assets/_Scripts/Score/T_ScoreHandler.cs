@@ -61,9 +61,10 @@ public class T_ScoreHandler : MonoBehaviour
             }
         }
         string scoreKey = levelIdentifier + "Score";
-        if (_score > PlayerPrefs.GetInt(scoreKey))
+        int cappedScore = Mathf.Min(_score, 3); // Cap the score at 3
+        if (cappedScore > PlayerPrefs.GetInt(scoreKey))
         {
-            PlayerPrefs.SetInt(scoreKey, _score);
+            PlayerPrefs.SetInt(scoreKey, cappedScore);
         }
     }
 }

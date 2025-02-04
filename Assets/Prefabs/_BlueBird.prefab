@@ -163,3 +163,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   launchForce: 8
   rb: {fileID: 2704199125752435723}
+  birdPrefab: {fileID: 6887721625134923418}
