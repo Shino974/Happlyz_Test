@@ -9,16 +9,17 @@ public class T_Slingshot : MonoBehaviour
     public LineRenderer trajectoryLineRenderer;
 
     private Vector3 _currentPosition;
-
     private float _maxLength = 3;
     private float _bottomBoundary = -3.5f;
-
     private bool _isMouseDown;
 
     public GameObject birdPrefab;
     private float _birdPositionOffset = -0.4f;
     private T_Birds _bird;
     private Collider2D _birdCollider;
+
+    public T_ScoreHandler scoreHandler; // Reference to the score handler
+    public T_LifeHandler lifeHandler; // Reference to the life handler
 
     void Start()
     {
@@ -36,11 +37,18 @@ public class T_Slingshot : MonoBehaviour
 
     private void CreateBird()
     {
-        _bird = Instantiate(birdPrefab).GetComponent<T_Birds>();
-        _birdCollider = _bird.GetComponent<Collider2D>();
-        _birdCollider.enabled = false;
-        _bird.rb.isKinematic = true;
-        ResetStrips();
+        if (lifeHandler != null && lifeHandler.Lives > 0)
+        {
+            _bird = Instantiate(birdPrefab).GetComponent<T_Birds>();
+            _birdCollider = _bird.GetComponent<Collider2D>();
+            _birdCollider.enabled = false;
+            _bird.rb.isKinematic = true;
+            ResetStrips();
+        }
+        else if (scoreHandler != null)
+        {
+            scoreHandler.ShowVictoryCanvas(); // Show the victory canvas if no lives are left
+        }
     }
 
     void Update()
@@ -91,6 +99,11 @@ public class T_Slingshot : MonoBehaviour
         _bird = null;
         _birdCollider = null;
         Invoke("CreateBird", 1);
+
+        if (lifeHandler != null)
+        {
+            lifeHandler.LoseLife(); // Decrease the number of lives
+        }
     }
 
     private void ResetStrips()
