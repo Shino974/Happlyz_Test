@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4608592014401500827}
   m_Layer: 0
   m_Name: _BlueBird
-  m_TagString: Untagged
+  m_TagString: Birds
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

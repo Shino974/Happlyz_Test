@@ -98,7 +98,7 @@ public class T_Slingshot : MonoBehaviour
 
         _bird = null;
         _birdCollider = null;
-        Invoke("CreateBird", 1);
+        Invoke("CreateBird", 5);
 
         if (lifeHandler != null)
         {

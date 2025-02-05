@@ -24,17 +24,18 @@ public class T_BlueBird : T_Birds
 
     private void DuplicateBird()
     {
-        Vector3 position = transform.position;
+        Vector3[] positions = {
+            transform.position + new Vector3(-1f, 0, 0),
+            transform.position + new Vector3(1f, 0, 0)
+        };
+
         Vector2 velocity = rb.velocity;
 
-        GameObject bird1 = Instantiate(birdPrefab, position + new Vector3(-0.5f, 0, 0), Quaternion.identity);
-        GameObject bird2 = Instantiate(birdPrefab, position, Quaternion.identity);
-        GameObject bird3 = Instantiate(birdPrefab, position + new Vector3(0.5f, 0, 0), Quaternion.identity);
-
-        bird1.GetComponent<Rigidbody2D>().velocity = velocity;
-        bird2.GetComponent<Rigidbody2D>().velocity = velocity;
-        bird3.GetComponent<Rigidbody2D>().velocity = velocity;
-
-        Destroy(gameObject);
+        foreach (Vector3 position in positions)
+        {
+            GameObject bird = Instantiate(birdPrefab, position, Quaternion.identity);
+            bird.GetComponent<Rigidbody2D>().velocity = velocity;
+            Destroy(bird, 4f);
+        }
     }
 }
