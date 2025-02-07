@@ -59,7 +59,6 @@ public class T_MenuHandler : MonoBehaviour
     public void QuitGame()
     {
         _audioSource.PlayOneShot(buttonSound);
-        PlayerPrefs.DeleteAll();
         Application.Quit();
     }
 
