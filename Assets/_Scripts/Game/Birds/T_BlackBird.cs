@@ -21,8 +21,9 @@ public class T_BlackBird : T_Birds
         }
     }
 
+    // Increase the size of the bird (Black Bird Power)
     private void IncreaseSize()
     {
-        transform.localScale *= 4; // Increase the size by 4 times
+        transform.localScale *= 4;
     }
 }

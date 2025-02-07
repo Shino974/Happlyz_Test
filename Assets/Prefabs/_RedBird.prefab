@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8916673971464312323}
   - component: {fileID: 4319171099443283029}
-  - component: {fileID: 3087323256553062770}
   - component: {fileID: 4634495260321951057}
+  - component: {fileID: 2630004068635236474}
   - component: {fileID: 1263324713815758384}
   m_Layer: 0
   m_Name: _RedBird
@@ -87,33 +87,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!50 &3087323256553062770
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6875984379864055454}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 6200000, guid: a5970db67e6dd134daa00f67e3de5dc0, type: 2}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!58 &4634495260321951057
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -149,6 +122,33 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.0908633}
   serializedVersion: 2
   m_Radius: 1.8192803
+--- !u!50 &2630004068635236474
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6875984379864055454}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!114 &1263324713815758384
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -162,4 +162,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   launchForce: 5
-  rb: {fileID: 3087323256553062770}
+  rb: {fileID: 2630004068635236474}
+  launchSound: {fileID: 8300000, guid: 1341a6568c4a37a4ea2c6606819450ea, type: 3}
+  collisionSound: {fileID: 8300000, guid: f84257ad59a50734db1d0346adf4a878, type: 3}

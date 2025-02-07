@@ -2,8 +2,6 @@ using UnityEngine;
 
 public class T_BlueBird : T_Birds
 {
-    public GameObject birdPrefab; // Reference to the bird prefab
-
     protected override void Start()
     {
         base.Start();
@@ -21,19 +19,23 @@ public class T_BlueBird : T_Birds
             DuplicateBird();
         }
     }
-
+    
+    // Duplicate the bird (Blue Bird Power)
     private void DuplicateBird()
     {
+        // Positions of the duplicated birds
         Vector3[] positions = {
             transform.position + new Vector3(-1f, 0, 0),
             transform.position + new Vector3(1f, 0, 0)
         };
-
+    
+        // Velocity of the duplicated birds
         Vector2 velocity = rb.velocity;
 
+        // Create the duplicated birds
         foreach (Vector3 position in positions)
         {
-            GameObject bird = Instantiate(birdPrefab, position, Quaternion.identity);
+            GameObject bird = Instantiate(gameObject, position, Quaternion.identity);
             bird.GetComponent<Rigidbody2D>().velocity = velocity;
             Destroy(bird, 4f);
         }

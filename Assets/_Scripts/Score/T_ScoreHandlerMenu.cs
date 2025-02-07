@@ -27,24 +27,20 @@ public class T_ScoreHandlerMenu : MonoBehaviour
         SetActiveStars(PlayerPrefs.GetInt("LevelThreeScore"), noStarsLevelThree, starsLevelThree);
     }
 
+    // Initialize the stars
     private void InitializeStars(GameObject[] noStars, GameObject[] stars)
     {
         foreach (var star in stars)
-        {
             star.SetActive(false);
-        }
     }
 
+    // Set the active stars
     private void SetActiveStars(int score, GameObject[] noStars, GameObject[] stars)
     {
         for (int i = 0; i < noStars.Length; i++)
-        {
             noStars[i].SetActive(i >= score);
-        }
 
         for (int i = 0; i < score; i++)
-        {
             stars[i].SetActive(true);
-        }
     }
 }

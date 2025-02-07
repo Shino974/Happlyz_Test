@@ -1025,6 +1025,7 @@ MonoBehaviour:
   - {fileID: 1862622776}
   - {fileID: 1552778369}
   levelIdentifier: LevelOne
+  victorySound: {fileID: 8300000, guid: cc65cdc415285f743bd1bd622d48d5da, type: 3}
 --- !u!114 &416214682
 MonoBehaviour:
   m_ObjectHideFlags: 0

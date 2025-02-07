@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 336374188833064401}
   - component: {fileID: 732573400168211921}
   - component: {fileID: 1463257686514493833}
-  - component: {fileID: 2704199125752435723}
+  - component: {fileID: 7153237360947266383}
   - component: {fileID: 4608592014401500827}
   m_Layer: 0
   m_Name: _BlueBird
@@ -122,7 +122,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.48255014}
   serializedVersion: 2
   m_Radius: 1.3057663
---- !u!50 &2704199125752435723
+--- !u!50 &7153237360947266383
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -162,5 +162,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   launchForce: 8
-  rb: {fileID: 2704199125752435723}
+  rb: {fileID: 7153237360947266383}
+  launchSound: {fileID: 8300000, guid: 1341a6568c4a37a4ea2c6606819450ea, type: 3}
+  collisionSound: {fileID: 8300000, guid: f84257ad59a50734db1d0346adf4a878, type: 3}
   birdPrefab: {fileID: 6887721625134923418}
