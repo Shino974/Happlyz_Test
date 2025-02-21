@@ -5325,9 +5325,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Mechant
+  m_text: 'Mechan
 
-    Zoizeau'
+    Zwazo'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 36ab3596da8260f418148017306b2322, type: 2}
   m_sharedMaterial: {fileID: -5476256990519190310, guid: 36ab3596da8260f418148017306b2322, type: 2}
