@@ -33,12 +33,12 @@ public class T_Slingshot : MonoBehaviour
     
     void Update()
     {
-        if (_isMouseDown)
+        if (_isMouseDown && _bird != null)
             HandleMouseDrag();
         else
             ResetStrips();
     }
-
+    
     // Initialize the line renderers for slingshot strips
     private void InitializeLineRenderers()
     {
@@ -88,15 +88,21 @@ public class T_Slingshot : MonoBehaviour
 
     private void OnMouseDown()
     {
-        _isMouseDown = true;
+        if (_bird != null)
+        {
+            _isMouseDown = true;
+        }
     }
 
     private void OnMouseUp()
     {
-        _isMouseDown = false;
-        Shoot();
-        _currentPosition = idlePosition.position;
-        trajectoryLineRenderer.positionCount = 0; // Clear the trajectory
+        if (_bird != null)
+        {
+            _isMouseDown = false;
+            Shoot();
+            _currentPosition = idlePosition.position;
+            trajectoryLineRenderer.positionCount = 0;
+        }
     }
 
     // Shoot the bird
@@ -106,7 +112,7 @@ public class T_Slingshot : MonoBehaviour
         _bird.rb.isKinematic = false;
         Vector3 birdForce = (_currentPosition - center.position) * _bird.launchForce * -1;
         _bird.Launch(birdForce);
-
+        
         // Destroy the bird after 5 seconds
         Destroy(_bird.gameObject, 3f);
         
